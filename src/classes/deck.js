@@ -26,7 +26,10 @@ export class Deck {
     }
 
     draw(){
-        return this.cards.pop();
+        if (!this.isEmpty()){
+            return this.cards.pop();
+        }
+        return null;
     }
 
     isEmpty(){
