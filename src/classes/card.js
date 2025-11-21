@@ -10,9 +10,13 @@ export class Card{
             11: "Jack",
             12: "Queen",
             13: "King",
-        };
-
-        return names[this.rank];
+        };  
+        if (names[this.rank] == undefined){
+            return this.rank;
+        }
+        else{
+            return names[this.rank];
+        }
     }
 
     getSuitName(){
