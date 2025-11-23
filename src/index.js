@@ -5,11 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Deck} from './classes/deck';
 import {Game} from './classes/game';
+import Background from './components/background';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Background />
   </React.StrictMode>
 );
 

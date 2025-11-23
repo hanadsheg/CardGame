@@ -6,6 +6,7 @@ export class Game{
         this.computerScore = 0;
         this.myScore = 0;
         this.playgame();
+        this.whowins();
     }
 
     playgame(){
@@ -28,8 +29,18 @@ export class Game{
             yourCard = this.gameDeck.draw();
         }
         }
+    }
 
-        
+    whowins(){
+        if (this.myScore > this.computerScore){
+            console.log("\nHurrayy! You WON!");
+        }
+        else if (this.myScore == this.computerScore){
+            console.log("\nOOO! You DREW!");
+        }
+        else{
+            console.log("\n Unlucky! You LOST!");
+        }
 
     }
 
