@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Background from './components/background';
+import Background from './components/AllGame';
 
 function App() {
   return (

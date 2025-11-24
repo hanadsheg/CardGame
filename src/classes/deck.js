@@ -37,5 +37,11 @@ export class Deck {
         return this.cards.length == 0;
     }
 
+    reset(){
+        this.cards = [];
+        this.newDeck();
+        this.shuffle();
+    }
+
     
 }

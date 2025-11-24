@@ -1,10 +1,25 @@
-import Deck from "../images/deck.jpg"
-function Deck(){
+import DeckImage from "../images/deck3.png"
+import "../styles/deck.css"
+import {Game} from "../classes/game.js"
+import CurrentCard from "./currentCard.js"
+
+
+const Deck = ({ onClick, cardRank, cardSuit }) => {
     return(
         <div className = "deck-container">
-            <button>
-                <img src = {Deck} className = "deck-button" />
+            <button className = "theButton" onClick={onClick}>
+                <img src = {DeckImage} className = "deck-button" />
             </button>
+
+            {/**
+             <CurrentCard
+            cardRank = {cardRank}
+            cardSuit = {cardSuit}
+             />
+             */}
+            
         </div>
     )
 }
+
+export default Deck;

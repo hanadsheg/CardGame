@@ -1,5 +1,5 @@
 export class Card{
-    constructor(rank, suit){
+    constructor(rank = 0, suit = ""){
         this.rank = rank;
         this.suit = suit;
     }
@@ -12,21 +12,22 @@ export class Card{
             13: "King",
         };  
         if (names[this.rank] == undefined){
-            return this.rank;
+            let string = "" + this.rank;
+            return string;
         }
         else{
-            return names[this.rank];
+            return String(names[this.rank]);
         }
     }
 
     getSuitName(){
         const suits = {
-            "S" : "Suits",
+            "S" : "Spades",
             "H" : "Hearts",
             "D" : "Diamonds",
             "C" : "Clubs",
         };
-        return suits[this.suit];
+        return String(suits[this.suit]);
     }
 
     toString(){
