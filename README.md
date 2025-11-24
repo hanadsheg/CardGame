@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# 🃏 War-Style Card Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple web-based card game built with React, focused on card drawing, comparison, and state management.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+* **Deck Management:** A class-based structure for creating, shuffling, and drawing from a standard 52-card deck.
+* **Gameplay Loop:** Users draw one card, the opponent draws another, and the higher rank wins the round.
+* **Scoring:** Tracks scores for the user and the computer (first to 5 points wins).
+* **Visual Feedback:** Displays the cards drawn and a dynamic text message for the result of the round.
+* **Responsive UI:** A simple, centered interface for a focused gaming experience.
+* **Game Reset:** A button to clear scores, reset the deck, and start a new game.
+* **CommandLine Result:** Also implements command-line results as an MVP!
 
-### `npm start`
+***
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ⚙️ Setup and Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Follow these steps to get the project running on your local machine.
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Node.js (LTS version recommended)
+* npm or yarn
 
-### `npm run build`
+### Steps
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1.  **Clone the repository:**
+    ```bash
+    git clone [Your Repository URL]
+    cd [Your Project Directory]
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    # or
+    # yarn install
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3.  **Run the application:**
+    ```bash
+    npm start
+    # or
+    # yarn start
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+***
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🕹️ How to Play
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1.  Click the card (or the Deck component) to initiate a round.
+2.  A card for you and a card for the opponent will be drawn from the deck.
+3.  The result text below the cards will instantly show which card was higher and update the score.
+4.  The game continues until either the player or the computer reaches 5 points.
+5.  Once the game is finished, a "Again?" (Reset) button will appear to start a new game.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+***
 
-## Learn More
+## Images
+<img width="1111" height="620" alt="image" src="https://github.com/user-attachments/assets/b167bea9-518e-4d72-bddf-941293fddb0f" />
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 💻 Tech Stack
 
-### Code Splitting
+* **React:** Frontend library for the user interface.
+* **JavaScript (ES6+):** For game logic and state management.
+* **CSS/SCSS:** For styling and layout.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+***
 
-### Analyzing the Bundle Size
+## ✨ Further Improvements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This section lists potential features, refactors, and styling enhancements for future development:
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* **User & Opponent's Card:** Currently, the opponent's card is only shown as data. Implement a visual component to show the opponent's card face-up after the round starts.
+* I was in the midst of this but ran out of time, hopefully can create in a future update.
+* **Score Display:** Add a persistent score display (e.g., "Player: X | Computer: Y").
+* **Animations:** Add subtle card flip or card draw animations for a smoother user experience.
+* **Code Refactoring:** Separate complex game logic (e.g., the `playround` function) into smaller, more specialized methods or Hooks.
